@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :blogs do 
+  resources :blogs do
     collection do
       post :confirm
     end
   end
+  # resources :webpages
+  get '/webpages', to: 'webpages#index'
 end
